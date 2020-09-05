@@ -1,0 +1,6 @@
+REPOSITORY                      TAG                 IMAGE ID            CREATED             SIZE
+ilyafedotov/ubuntu-tmp-file     latest              f60fb09fa4a3        11 minutes ago      64.2MB
+ubuntu                          18.04               2eb2d147e1a2        7 days ago          64.2MB
+hello-world                     latest              bf436fb1ae65        7 months ago        13.3kB
+
+image является родительской сущностью для контейнера. вывод команды inspect содержит так же параметры запуска контейнера(например секцию NetworkSettings)
