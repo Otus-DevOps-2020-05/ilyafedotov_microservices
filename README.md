@@ -27,3 +27,9 @@ ilyafedotov/ui            3.0                 84daaa26cb45        5 minutes ago 
 ilyafedotov/ui            2.0                 9ff50d483713        17 minutes ago      449MB
 ilyafedotov/ui            1.0                 b745498af5f9        50 minutes ago      770MB
 ```
+# Домашняя работа docker-4
+
+1) Изучили как работает сеть Docker
+2) Параметризован docker-compose.yml, приложения разнесены по разным сетям
+3) По умолчанию, в качестве имени проекта используется имя директории, можно задать через переменную COMPOSE_PROJECT_NAME.
+4) (*) Создан docker-compose.override.yml
