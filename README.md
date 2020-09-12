@@ -33,3 +33,9 @@ ilyafedotov/ui            1.0                 b745498af5f9        50 minutes ago
 2) Параметризован docker-compose.yml, приложения разнесены по разным сетям
 3) По умолчанию, в качестве имени проекта используется имя директории, можно задать через переменную COMPOSE_PROJECT_NAME.
 4) (*) Создан docker-compose.override.yml
+
+# Домашняя работа gitlab-ci-1
+
+1) Создана VM в Yandex.Cloud с помощью Terraform
+2) (*) С помощью плейбуков Ansible на VM устанавливается Docker и запускаются контейнеры с Gitlab и Gitlab runner и регистрируем его
+3) (*) В пейпланне собирается контейнер с приложением reddit
