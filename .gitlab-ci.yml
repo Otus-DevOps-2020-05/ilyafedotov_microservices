@@ -9,21 +9,25 @@ stages:
 variables:
   DATABASE_URL: 'mongodb://mongo/user_posts'
 
-before_script:
-  - cd reddit
-  - bundle install
+#before_script:
+#  - cd reddit
+#  - bundle install
 
 build_job:
   stage: build
+  image: docker:19.03.12
   script:
-    - echo 'Building'
+    -  docker build -t reddit:$CI_COMMIT_REF_NAME -f gitlab-ci/docker/Dockerfile . 
   
 test_unit_job:
   stage: test
-  services:
-    - mongo:latest
+#   services:  
+#   - mongo:latest 
+#  script:
+#    - ruby simpletest.rb 
+  image: docker:19.03.12
   script:
-    - ruby simpletest.rb
+    - docker run -t reddit:$CI_COMMIT_REF_NAME /bin/bash -c 'cd reddit && ruby simpletest.rb'
   
 test_integration_job:
   stage: test
@@ -37,6 +41,17 @@ deploy_dev_job:
   environment:
     name: dev
     url: http://dev.example.com
+
+branch review:
+  stage: review
+  script: echo "Deploy to $CI_ENVIRONMENT_SLUG" && docker run -t reddit:$CI_COMMIT_REF_NAME
+  environment: 
+    name: branche$CI_COMMIT_REF_NAME 
+    url: http://$CI_ENVIRONMENT_SLUG.example.com 
+  only: 
+    - branches 
+  except: 
+    - master
     
 staging:
   stage: stage
