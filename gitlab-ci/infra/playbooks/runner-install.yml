@@ -1,0 +1,30 @@
+---
+- name: GitLab Runner install
+  hosts: all
+  become: true
+  gather_facts: False 
+  tasks:  
+  - name: Create runner
+    docker_container:
+      name: gitlab_runner
+      image: gitlab/gitlab-runner:latest
+      restart: true
+      volumes:
+        - /srv/gitlab-runner/config:/etc/gitlab-runner
+        - /var/run/docker.sock:/var/run/docker.sock 
+
+  - name: Register runner
+    command: docker exec -it gitlab_runner gitlab-runner register 
+      --url http://{{ hostvars[item]['host_ext_ip'] }}/ 
+      --non-interactive 
+      --locked=false 
+      --name DockerRunner 
+      --executor docker 
+      --docker-image "docker:19.03.12" 
+      --docker-privileged  
+      --registration-token 'v7UqDoCeRbpyFMaqagwm' 
+      --docker-volumes /var/run/docker.sock:/var/run/docker.sock 
+      --tag-list "linux,xenial,ubuntu,docker" 
+      --run-untagged
+    with_items:
+      - "{{ groups['gitlab-ci-vm'] }}"
