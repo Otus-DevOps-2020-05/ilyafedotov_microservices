@@ -1,10 +1,10 @@
 global:
-    slack_api_url: 'https://hooks.slack.com/services/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'
+    slack_api_url: 'https://hooks.slack.com/services/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'
   
-  route:
-    receiver: 'slack-notifications'
+route:
+  receiver: 'slack-notifications'
   
-  receivers:
+receivers:
   - name: 'slack-notifications'
     slack_configs:
-    - channel: '#userchannel'
+    - channel: '#ilya_fedotov'
