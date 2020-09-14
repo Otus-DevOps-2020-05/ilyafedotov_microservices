@@ -23,12 +23,25 @@
            - targets:
              - 'node-exporter:9100'
 
-      - job_name: 'mongodb'
+      - job_name: 'cadvisor'
         static_configs:
            - targets:
-             - 'mongo-exporter:9216'
-    
-      - job_name: 'cloudprober'
+              - 'cadvisor:8080'
+      - job_name: 'post'
         static_configs:
-          - targets:
-            - 'blackbox-exporter:9313'
+           - targets:
+             - 'post:5000'
+      - job_name: 'docker'
+        static_configs:
+           - targets: ['docker.for.mac.host.internal:9323']
+
+    rule_files:
+      - "alerts.yml"
+    
+    alerting:
+      alertmanagers:
+      - scheme: http
+        static_configs:
+        - targets:
+          - "alertmanager:9093"  
+
