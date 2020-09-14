@@ -39,3 +39,11 @@ ilyafedotov/ui            1.0                 b745498af5f9        50 minutes ago
 1) Создана VM в Yandex.Cloud с помощью Terraform
 2) (*) С помощью плейбуков Ansible на VM устанавливается Docker и запускаются контейнеры с Gitlab и Gitlab runner и регистрируем его
 3) (*) В пейпланне собирается контейнер с приложением reddit
+
+# Домашняя работа monitoring-1
+
+1) Знакомство с Prometheus
+2) (*) Добавлен экспортер для mongodb(на основе https://github.com/percona/mongodb_exporter)
+3) (*) Добавлен BlackBox экспортер на основе Cloudprober
+4) (*) Создан Makefile
+Ссылка на Docker Hub: https://hub.docker.com/repositories/ilyafedotov
