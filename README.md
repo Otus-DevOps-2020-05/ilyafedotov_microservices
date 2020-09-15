@@ -47,3 +47,9 @@ ilyafedotov/ui            1.0                 b745498af5f9        50 minutes ago
 3) (*) Добавлен BlackBox экспортер на основе Cloudprober
 4) (*) Создан Makefile
 Ссылка на Docker Hub: https://hub.docker.com/repositories/ilyafedotov
+
+# Домашняя работа monitoring-2
+1) Продолжение изучения Prometheus
+2) (*) Build и push новых образов добавлены в Makefile
+3) (*) Настроена отдача метрик Docker демоном и настроен дашборд Docker Engine Metrics(https://grafana.com/grafana/dashboards/1229)
+4) (**) Настроено автоматическое добавление источников данных и дашбордов в Grafana

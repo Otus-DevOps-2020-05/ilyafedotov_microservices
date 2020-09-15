@@ -3,10 +3,11 @@ POST_VERSION = 1.0
 UI_VERSION = 1.0
 PROMETHEUS_VERSION = 1.0
 BLACKBOX_VERSION = 1.0
+ALERTMANAGER_VERSION = 1.0
 USER_NAME = ilyafedotov
 VPATH = src:monitoring
-build: comment_build post_build ui_build prometheus_build
-push: comment_push post_push ui_push prometheus_push
+build: comment_build post_build ui_build prometheus_build alertmanager_build
+push: comment_push post_push ui_push prometheus_push alertmanager_push
 comment_build: comment
 	docker build -t $(USER_NAME)/comment:$(COMMENT_VERSION) $^
 post_build: post-py
@@ -15,6 +16,8 @@ ui_build: ui
 	docker build -t $(USER_NAME)/ui:$(UI_VERSION) $^
 prometheus_build: prometheus
 	docker build -t $(USER_NAME)/prometheus:$(PROMETHEUS_VERSION) $^
+alertmanager_build: alertmanager
+	docker build -t $(USER_NAME)/alertmanager:$(ALERTMANAGER_VERSION) $^
 comment_push: comment
 	docker push $(USER_NAME)/comment:$(COMMENT_VERSION)
 post_push: post-py 
@@ -23,3 +26,5 @@ ui_push: ui
 	docker push $(USER_NAME)/ui:$(UI_VERSION)
 prometheus_push: prometheus
 	docker push $(USER_NAME)/prometheus:$(PROMETHEUS_VERSION)
+alertmanager_push: alertmanager
+	docker push $(USER_NAME)/alertmanager:$(ALERTMANAGER_VERSION)
