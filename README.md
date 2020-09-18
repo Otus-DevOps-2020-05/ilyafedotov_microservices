@@ -60,3 +60,9 @@ ilyafedotov/ui            1.0                 b745498af5f9        50 minutes ago
 2) (*) Добавлен grok паттерн для разбора второго типа логов сервиса ui
 3) Знакомство с распределенным трейсинком на примере Zipkin
 4) (*) Траблшутинг UI: Изначально приложение не работало из-за дефолтных переменных POST_SERVICE_HOST и POST_SERVICE_PORT, решилось добавлением их в Dockerfile. Задержка была на этапе db_find_single_post(167 строка файла post_app.py: time.sleep(3))
+
+
+# Домашняя работа kubernetes-1
+
+1) Пройден Kubernetes The Hard Way
+2) (*) Создана Ansible роль, опимывающая развертывание мастер-ноды кластера(шаг 08-bootstrapping-kubernetes-controllers)
