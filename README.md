@@ -65,4 +65,4 @@ ilyafedotov/ui            1.0                 b745498af5f9        50 minutes ago
 # Домашняя работа kubernetes-1
 
 1) Пройден Kubernetes The Hard Way
-2) (*) Создана Ansible роль, опимывающая развертывание мастер-ноды кластера(шаг 08-bootstrapping-kubernetes-controllers)
+2) (*) Создана Ansible роль, описывающая развертывание мастер-ноды кластера(шаг 08-bootstrapping-kubernetes-controllers)
