@@ -20,5 +20,10 @@
           component: ui
       spec:
         containers:
-        - image: ilyafedotov/ui
+        - image: ilyafedotov/ui:1.0
           name: ui
+          env:
+          - name: ENV
+            valueFrom:
+              fieldRef:
+                fieldPath: metadata.namespace

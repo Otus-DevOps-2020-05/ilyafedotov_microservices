@@ -1,29 +1,17 @@
 ---
-    apiVersion: apps/v1
-    kind: Deployment
+    apiVersion: v1
+    kind: Service
     metadata:
       name: ui
       labels:
         app: reddit
         component: ui
     spec:
-      replicas: 3
+      type: NodePort
+      ports:  
+      - port: 9292
+        protocol: TCP
+        targetPort: 9292
       selector:
-        matchLabels:
-          app: reddit
-          component: ui
-      template:
-        metadata:
-          name: ui-pod
-          labels:
-            app: reddit
-            component: ui
-        spec:
-          containers:
-          - image: chromko/ui
-            name: ui
-            env:
-            - name: ENV
-              valueFrom:
-                fieldRef:
-                  fieldPath: metadata.namespace
+        app: reddit
+        component: ui
