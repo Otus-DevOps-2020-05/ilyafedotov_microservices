@@ -20,8 +20,8 @@
           component: post
       spec:
         containers:
-        - image: ilyafedotov/post
+        - image: ilyafedotov/post:1.0
           name: post
           env:
             - name: POST_DATABASE_HOST
-              value: comment-db
+              value: post-db
