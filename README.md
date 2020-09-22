@@ -66,3 +66,8 @@ ilyafedotov/ui            1.0                 b745498af5f9        50 minutes ago
 
 1) Пройден Kubernetes The Hard Way
 2) (*) Создана Ansible роль, описывающая развертывание мастер-ноды кластера(шаг 08-bootstrapping-kubernetes-controllers)
+
+# Домашняя работа kubernetes-2
+
+1) Подготовлены манифесты для приложения Reddit
+2) Развернут Kubernetes в Yandex.Cloud и в нем запущено приложение Reddit
