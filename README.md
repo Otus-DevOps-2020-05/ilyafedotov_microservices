@@ -71,3 +71,10 @@ ilyafedotov/ui            1.0                 b745498af5f9        50 minutes ago
 
 1) Подготовлены манифесты для приложения Reddit
 2) Развернут Kubernetes в Yandex.Cloud и в нем запущено приложение Reddit
+
+# Домашняя работа kubernetes-3
+
+1) Создан ingress
+2) (*)Создан манифест ui-secret.yml с описанием секрета для ingress
+3) Созданы сетевые политики для mongodb
+4) Созданы манифесты для диманического создания PersistentVolume
