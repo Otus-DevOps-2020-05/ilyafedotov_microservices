@@ -14,4 +14,4 @@
   
     - name: mongodb
       version: 7.2.8
-      repository: https://charts.bitnami.com/bitnami
+      repository: "https://kubernetes-charts.storage.googleapis.com"

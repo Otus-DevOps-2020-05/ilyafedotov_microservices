@@ -9,7 +9,7 @@ dependencies:
   repository: file://../comment
   version: 1.0.0
 - name: mongodb
-  repository: https://charts.bitnami.com/bitnami
+  repository: https://kubernetes-charts.storage.googleapis.com
   version: 7.2.8
-digest: sha256:99edd1692f708bdbcb01744b22c563fae7f67d759fe62750c66f774b12ef0f47
-generated: "2020-09-28T00:11:02.686558+03:00"
+digest: sha256:9ede09e6784406d7cfac15653db59894e9333d5a689e89bbab654fc56b943a1c
+generated: "2020-10-01T01:06:26.386525+03:00"
