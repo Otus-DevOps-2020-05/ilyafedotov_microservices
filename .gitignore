@@ -6,4 +6,3 @@
 .env
 Gitlab_ci/
 *.tgz
-kubernetes/Charts/gitlab-omnibus/
