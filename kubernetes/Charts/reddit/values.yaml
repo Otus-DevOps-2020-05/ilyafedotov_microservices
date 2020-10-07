@@ -1,0 +1,20 @@
+comment:
+    image:
+      repository: ilyafedotov/comment
+      tag: latest
+    service:
+      externalPort: 9292
+  
+post:
+    image:
+      repository: ilyafedotov/post
+      tag: latest
+    service:
+      externalPort: 5000
+  
+ui:
+    image:
+      repository: ilyafedotov/ui
+      tag: latest
+    service:
+      externalPort: 9292

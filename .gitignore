@@ -4,3 +4,5 @@
 *.tfvars
 .terraform/
 .env
+Gitlab_ci/
+*.tgz
