@@ -13,5 +13,5 @@
       repository: "file://../comment"
   
     - name: mongodb
-      version: 7.2.8
+      version: 7.2.10
       repository: "https://kubernetes-charts.storage.googleapis.com"
